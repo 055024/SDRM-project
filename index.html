@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDRM Project Report: ICICI Bank Distribution Strategy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* Gray 50 */
+            color: #374151; /* Gray 700 */
+        }
+        .section-card {
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb; /* Gray 200 */
+            border-radius: 0.75rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+        }
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-color: #fb923c; /* Orange 400 */
+        }
+        .nav-link {
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #f97316; /* Orange 500 */
+            transform: translateY(-2px);
+        }
+        .nav-link:active {
+            transform: translateY(0);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #f97316, #ea580c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .tab-btn {
+            transition: all 0.3s ease;
+        }
+        .tab-btn:active {
+            transform: scale(0.95);
+        }
+        .tab-btn.active {
+            background-color: #f97316; /* Orange 500 */
+            color: #ffffff;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Added animations */
+        @keyframes pop-in {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .hero-animate {
+            animation: pop-in 0.8s ease-out forwards;
+            opacity: 0; /* Start hidden for animation */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-900">
+                <span class="gradient-text">ICICI Bank</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-lg">
+                <a href="#objectives" class="nav-link">Objectives</a>
+                <a href="#channels" class="nav-link">Channels</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#segmentation" class="nav-link">Segmentation</a>
+                <a href="#technology" class="nav-link">Technology</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+            <a href="#objectives" class="block py-2 nav-link mobile-nav-link">Objectives</a>
+            <a href="#channels" class="block py-2 nav-link mobile-nav-link">Channels</a>
+            <a href="#products" class="block py-2 nav-link mobile-nav-link">Products</a>
+            <a href="#segmentation" class="block py-2 nav-link mobile-nav-link">Segmentation</a>
+            <a href="#technology" class="block py-2 nav-link mobile-nav-link">Technology</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Hero Section -->
+        <section class="text-center py-20">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight hero-animate" style="animation-delay: 0.1s;">
+                Distribution of Banking Products & Services
+            </h1>
+            <h2 class="mt-4 text-2xl md:text-3xl font-semibold gradient-text hero-animate" style="animation-delay: 0.3s;">A Case Study of ICICI Bank</h2>
+            <p class="mt-8 text-lg text-gray-600 hero-animate" style="animation-delay: 0.5s;">Project Report for Sales Distribution and Retail Management</p>
+            <div class="mt-6 text-sm text-gray-500 hero-animate" style="animation-delay: 0.7s;">
+                <p class="font-semibold">Submitted by: Group J</p>
+                <p>Mohit Agarwal, Yashika Gupta, Akshita Jain, Pranjal Sukhija</p>
+            </div>
+        </section>
+
+        <!-- Project Objectives & Methodology -->
+        <section id="objectives" class="py-16 fade-in">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="section-card p-8">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Project Objectives</h3>
+                    <ul class="space-y-3 text-gray-600 list-disc list-inside">
+                        <li>Analyse the main distribution channels for ICICI products.</li>
+                        <li>Examine the transformation of physical vs. digital channels.</li>
+                        <li>Study customer segmentation across urban and rural markets.</li>
+                        <li>Assess technology adoption and its impact on service delivery.</li>
+                        <li>Identify challenges, opportunities, and improvements.</li>
+                    </ul>
+                </div>
+                <div class="section-card p-8">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Methodology</h3>
+                    <ul class="space-y-3 text-gray-600 list-disc list-inside">
+                        <li>Conducted interviews with key bank employees.</li>
+                        <li>Reviewed available data on product distribution channels.</li>
+                        <li>Studied internal and published materials on product adoption.</li>
+                        <li>Insights gathered from an industry expert, Mr. Mayank Singh, Regional Head Sales at ICICI Bank.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Screenshots section -->
+            <div class="section-card p-8 mt-8 fade-in">
+                <h3 class="text-2xl font-bold mb-6 text-gray-900 text-center">Connecting with the Industry Expert</h3>
+                <div class="max-w-4xl mx-auto">
+                    <div class="space-y-4">
+                        <div class="max-w-2xl mx-auto">
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                <img src="s1.jpg" alt="Initial contact with Mayank Singh on WhatsApp" class="rounded-lg shadow-md w-full">
+                                <img src="s2.jpg" alt="Scheduling the meeting with Mayank Singh" class="rounded-lg shadow-md w-full">
+                                <img src="s3.jpg" alt="Thank you message after the interview" class="rounded-lg shadow-md w-full">
+                            </div>
+                        </div>
+                        <div>
+                            <img src="s4.png" alt="Video call with Mayank Singh and the team" class="rounded-lg shadow-md w-full mx-auto">
+                        </div>
+                    </div>
+                </div>
+                 <p class="mt-6 text-center text-sm text-gray-500 italic">Screenshots showing the process of connecting with and interviewing the industry expert.</p>
+            </div>
+        </section>
+
+        <!-- Channel Analysis -->
+        <section id="channels" class="py-16 fade-in">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Channel Analysis</h2>
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Branch Channel -->
+                <div class="section-card p-6 text-center">
+                    <h4 class="text-xl font-semibold mb-2 text-orange-600">Branch Channel</h4>
+                    <p class="text-gray-600">The backbone of distribution. Physical branches for direct, personalized customer service, operated by salaried employees.</p>
+                </div>
+                <!-- Builder/DRO Channel -->
+                <div class="section-card p-6 text-center">
+                    <h4 class="text-xl font-semibold mb-2 text-orange-600">Builder/DRO Channel</h4>
+                    <p class="text-gray-600">Partnerships with property builders (e.g., DLF, M3M) to streamline mortgage products for new projects.</p>
+                </div>
+                <!-- DSA/DMM Vertical -->
+                <div class="section-card p-6 text-center">
+                    <h4 class="text-xl font-semibold mb-2 text-orange-600">DSA/DMM Vertical</h4>
+                    <p class="text-gray-600">External agents, brokers, and CAs who distribute products, primarily loans, on a commission basis.</p>
+                </div>
+            </div>
+
+            <div class="section-card p-8 overflow-x-auto">
+                 <h3 class="text-2xl font-bold mb-6 text-gray-900 text-center">Channel Comparison</h3>
+                <table class="w-full text-left">
+                    <thead class="border-b border-gray-200">
+                        <tr>
+                            <th class="p-4 font-semibold text-gray-800">Channel</th>
+                            <th class="p-4 font-semibold text-gray-800">Partners</th>
+                            <th class="p-4 font-semibold text-gray-800">Most Used For</th>
+                            <th class="p-4 font-semibold text-gray-800">Cost Effectiveness</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr>
+                            <td class="p-4 font-medium text-orange-600">Branch</td>
+                            <td class="p-4">Salaried employees</td>
+                            <td class="p-4">All products, routine needs</td>
+                            <td class="p-4 text-green-600">Highest</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium text-orange-600">Builder/DRO</td>
+                            <td class="p-4">Builders, DRO team</td>
+                            <td class="p-4">Mortgages for new projects</td>
+                            <td class="p-4 text-yellow-600">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium text-orange-600">DSA/DMM</td>
+                            <td class="p-4">Agents, CAs, brokers</td>
+                            <td class="p-4">Loans, alternative cases</td>
+                            <td class="p-4 text-red-600">Lowest</td>
+                        </tr>
+                    </tbody>
+                </table>
+                 <p class="mt-6 text-center text-gray-500 italic">The Branch Channel is most dominant due to its cost-effectiveness and central management, serving as the preferred choice for both the bank and its customers.</p>
+            </div>
+        </section>
+
+        <!-- Product-Specific Distribution -->
+        <section id="products" class="py-16 fade-in">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Product Distribution & Digital Adoption</h2>
+            <div class="section-card p-8">
+                <div class="flex flex-wrap justify-center gap-2 mb-8">
+                    <button class="tab-btn px-4 py-2 rounded-full font-semibold text-sm bg-gray-100 text-gray-600 hover:bg-orange-500 hover:text-white active" data-tab="mortgages">Mortgages</button>
+                    <button class="tab-btn px-4 py-2 rounded-full font-semibold text-sm bg-gray-100 text-gray-600 hover:bg-orange-500 hover:text-white" data-tab="loans">Personal Loans</button>
+                    <button class="tab-btn px-4 py-2 rounded-full font-semibold text-sm bg-gray-100 text-gray-600 hover:bg-orange-500 hover:text-white" data-tab="cards">Credit Cards</button>
+                    <button class="tab-btn px-4 py-2 rounded-full font-semibold text-sm bg-gray-100 text-gray-600 hover:bg-orange-500 hover:text-white" data-tab="fds">Fixed Deposits</button>
+                    <button class="tab-btn px-4 py-2 rounded-full font-semibold text-sm bg-gray-100 text-gray-600 hover:bg-orange-500 hover:text-white" data-tab="insurance">Insurance</button>
+                </div>
+                <div class="tab-content">
+                    <div id="mortgages" class="tab-pane active">
+                        <h4 class="text-xl font-semibold text-orange-600 mb-2">Mortgages (Home Loans)</h4>
+                        <p>Traditionally branch-driven via RMs and DSAs. Now increasingly uses the <span class="font-bold text-gray-700">iLens digital platform</span> for faster, paperless approvals. Pre-approved offers are also pushed through the iMobile Pay app.</p>
+                    </div>
+                    <div id="loans" class="tab-pane hidden">
+                        <h4 class="text-xl font-semibold text-orange-600 mb-2">Personal Loans</h4>
+                        <p>A <span class="font-bold text-gray-700">digital-first product</span>. Instant loans with e-KYC and Aadhaar-based e-sign through iMobile Pay and the website are common. Branch channels cater to non-pre-approved customers.</p>
+                    </div>
+                    <div id="cards" class="tab-pane hidden">
+                        <h4 class="text-xl font-semibold text-orange-600 mb-2">Credit Cards</h4>
+                        <p>Acquired through both digital campaigns (website, app, e-commerce tie-ups) and physical channels (DSAs, in-branch). Instant virtual cards are issued for partnerships like the <span class="font-bold text-gray-700">Amazon Pay–ICICI card</span>.</p>
+                    </div>
+                    <div id="fds" class="tab-pane hidden">
+                        <h4 class="text-xl font-semibold text-orange-600 mb-2">Fixed Deposits (FDs)</h4>
+                        <p>One of the most digitized products. Over <span class="font-bold text-gray-700">80% of new deposits</span> are opened via iMobile Pay and Internet Banking. Branches remain crucial for senior citizens and rural customers.</p>
+                    </div>
+                     <div id="insurance" class="tab-pane hidden">
+                        <h4 class="text-xl font-semibold text-orange-600 mb-2">Insurance</h4>
+                        <p>Primarily sold via <span class="font-bold text-gray-700">bancassurance</span> and branch channels, supported by relationship managers. Digital journeys on the app and website are increasingly used for faster policy issuance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Segmentation -->
+        <section id="segmentation" class="py-16 fade-in">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Customer Segmentation & Financial Inclusion</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="section-card p-8">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Urban vs. Rural Markets</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-lg font-semibold text-orange-600">Urban Customers</h4>
+                            <p>Fast-paced, consumer-driven needs. Higher demand for credit cards, auto loans, and home loans to manage a modern lifestyle.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-orange-600">Rural Customers</h4>
+                            <p>Needs are tied to community, farming, and family. High demand for gold loans, education loans, and business loans for local shops.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-card p-8">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Salaried vs. Self-Employed</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-lg font-semibold text-orange-600">Salaried Individuals</h4>
+                            <p>Stable, predictable income. Targeted with products for personal spending like credit cards and auto loans.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-orange-600">Self-Employed Individuals</h4>
+                            <p>Variable income stream. Targeted with products to support business growth, such as business loans and commercial property loans.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-card p-8 mt-8">
+                 <h3 class="text-2xl font-bold mb-4 text-gray-900">Financial Inclusion Challenge</h3>
+                 <p class="text-gray-600">A key challenge is bridging the urban-rural divide. In cities, a branch may be available every 5 km, but in rural areas, a single branch may serve 5-10 villages. Bank staff act as community educators to build trust and increase awareness, but significant work remains to make banking truly accessible for all.</p>
+            </div>
+        </section>
+        
+        <!-- Technology, Challenges & Recommendations -->
+        <section id="technology" class="py-16 fade-in">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Technology, Challenges & Recommendations</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Technology -->
+                <div class="section-card p-8">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Technology & Innovation</h3>
+                    <ul class="space-y-3 text-gray-600 list-disc list-inside">
+                        <li>Advanced CRM for lead tracking.</li>
+                        <li>Proprietary 'iLens' platform.</li>
+                        <li>AI-based chatbots (iPal).</li>
+                        <li>Predictive analytics for offers.</li>
+                        <li>Mobile apps for sales force.</li>
+                    </ul>
+                </div>
+                <!-- Challenges -->
+                <div class="section-card p-8">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Key Challenges</h3>
+                     <ul class="space-y-3 text-gray-600 list-disc list-inside">
+                        <li>Low digital literacy in rural areas.</li>
+                        <li>Channel conflicts and overlaps.</li>
+                        <li>Complex digital journeys for some products.</li>
+                        <li>Data privacy and compliance risks.</li>
+                        <li>Uneven sales force productivity.</li>
+                    </ul>
+                </div>
+                <!-- Recommendations -->
+                <div class="section-card p-8">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Recommendations</h3>
+                     <ul class="space-y-3 text-gray-600 list-disc list-inside">
+                        <li>Invest in digital literacy campaigns.</li>
+                        <li>Develop vernacular apps for rural areas.</li>
+                        <li>Create a 360-degree customer view.</li>
+                        <li>Empower channel partners with digital training.</li>
+                        <li>Evolve into a balanced 'Phygital' ecosystem.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-500">
+            <img src="https://i.imgur.com/kZ42G7A.png" alt="FORE School of Management Logo" class="mx-auto mb-4 h-16">
+            <p>SDRM Project Report - A Case Study of ICICI Bank</p>
+            <p>FORE School of Management, New Delhi</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // --- Tab Functionality ---
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Deactivate all buttons and panes
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => {
+                        pane.classList.add('hidden');
+                        pane.classList.remove('active');
+                    });
+
+                    // Activate clicked button and corresponding pane
+                    button.classList.add('active');
+                    const tabId = button.dataset.tab;
+                    document.getElementById(tabId).classList.remove('hidden');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+
+            // --- Active Nav Link on Scroll ---
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.4
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href').substring(1) === entry.target.id) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+            
+            // --- Fade-in on Scroll ---
+            const fadeElements = document.querySelectorAll('.fade-in');
+
+            const fadeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            fadeElements.forEach(el => {
+                fadeObserver.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
+
